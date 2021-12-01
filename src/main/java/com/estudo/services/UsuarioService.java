@@ -21,5 +21,8 @@ public class UsuarioService {
 		Optional<Usuario> usuario=usuarioResource.findById(id);
 		return usuario.get();
 	}
+	public Usuario adicionaUsuario(Usuario u) {
+		return usuarioResource.save(u);
+	}
 	
 }
