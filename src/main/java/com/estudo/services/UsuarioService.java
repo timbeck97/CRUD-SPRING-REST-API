@@ -24,5 +24,12 @@ public class UsuarioService {
 	public Usuario adicionaUsuario(Usuario u) {
 		return usuarioResource.save(u);
 	}
+	public void atualizaUsuario(Long id, Usuario u) {
+		Usuario x = usuarioResource.getById(id);
+		x.setNome(u.getNome());
+		x.setIdade(u.getIdade());
+		x.setCpf(u.getCpf());
+		usuarioResource.save(x);
+	}
 	
 }
