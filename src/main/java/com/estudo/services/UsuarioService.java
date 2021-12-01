@@ -24,12 +24,15 @@ public class UsuarioService {
 	public Usuario adicionaUsuario(Usuario u) {
 		return usuarioResource.save(u);
 	}
-	public void atualizaUsuario(Long id, Usuario u) {
-		Usuario x = usuarioResource.getById(id);
-		x.setNome(u.getNome());
-		x.setIdade(u.getIdade());
-		x.setCpf(u.getCpf());
-		usuarioResource.save(x);
+	public Usuario atualizaUsuario(Long id, Usuario u) {
+		Usuario user = usuarioResource.getById(id);
+		user.setNome(u.getNome());
+		user.setIdade(u.getIdade());
+		user.setCpf(u.getCpf());
+		return usuarioResource.save(user);
+	}
+	public void deletaUsuario(Long id) {
+		usuarioResource.deleteById(id);
 	}
 	
 }
