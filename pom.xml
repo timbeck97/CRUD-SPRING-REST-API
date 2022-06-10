@@ -50,11 +50,7 @@
                             <groupId>com.microsoft.azure</groupId>
                             <artifactId>azure-webapp-maven-plugin</artifactId>
                             <version>1.4.0</version>
-                            <configuration>
-                                <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
-                                <appName>${WEBAPP_NAME}</appName>
-                                <linuxRuntime>tomcat 8.5-jre8</linuxRuntime>
-                            </configuration>
+                            
                         </plugin>
 		</plugins>
 	</build>
